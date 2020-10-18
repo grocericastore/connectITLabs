@@ -70,7 +70,7 @@
                 alert("Please fill all the details to continue");
             } else {
                 $.ajax({
-                    url: "http://localhost:3000/api/sendMail",
+                    url: "https://connectitlabs.herokuapp.com/api/sendMail",
                     type: "POST",
                     data: JSON.stringify([{
                         name: $("#formName").val(),
