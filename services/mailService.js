@@ -3,9 +3,7 @@ const nodemailer = require("nodemailer");
 async function sendMail(body) {
 
     let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        service: "gmail",
         auth: {
             user: 'siddhantgupta89@gmail.com',
             pass: 'Siddh@865',
@@ -15,7 +13,7 @@ async function sendMail(body) {
     try {
         let info = await transporter.sendMail({
             from: '"Connect IT Labs" <siddhantgupta89@gmail.com>',
-            to: body.email,
+            to: 'siddhantgupta993@gmail.com',
             subject: "Query from website",
             text: body.subject,
             html: `<b>${body.subject}</b>
