@@ -18,10 +18,10 @@ async function sendMail(body) {
             text: body.subject,
             html: `<b>${body.subject}</b>
             <br> Below are the details of user query:<br><br>
-            <p style='font-weight: bold; color: #2F4F4F'>NAME: </p> ${body.name}<br>
-            <p style='font-weight: bold; color: #2F4F4F'>EMAIL: </p> ${body.email}<br>
-            <p style='font-weight: bold; color: #2F4F4F'>PHONE: </p> ${body.phone}<br>
-            <p style='font-weight: bold; color: #2F4F4F'>MESSAGE: </p> ${body.message}<br>`,
+            <span style='font-weight: bold; color: #2F4F4F'>NAME: </span> ${body.name}<br>
+            <span style='font-weight: bold; color: #2F4F4F'>EMAIL: </span> ${body.email}<br>
+            <span style='font-weight: bold; color: #2F4F4F'>PHONE: </span> ${body.phone}<br>
+            <span style='font-weight: bold; color: #2F4F4F'>MESSAGE: </span> ${body.message}<br>`,
         });
         console.log(`Mail sent successfully: ${info.messageId}`);
 
